@@ -7,21 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB1CAAB92AF7CE4A0047F9B5 /* DeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1CAAB82AF7CE4A0047F9B5 /* DeviceView.swift */; };
+		FB1CAABD2AF7E9BD0047F9B5 /* EnterField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1CAABC2AF7E9BD0047F9B5 /* EnterField.swift */; };
+		FB1CAAC42AF983E30047F9B5 /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1CAAC32AF983E30047F9B5 /* WebViewModel.swift */; };
+		FB41EB222B013173007126E0 /* DeviceWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41EB212B013173007126E0 /* DeviceWebView.swift */; };
+		FB41EB242B0138D8007126E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41EB232B0138D8007126E0 /* AppDelegate.swift */; };
 		FBAC89162AF527BA00320A91 /* SimulatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC89152AF527BA00320A91 /* SimulatorApp.swift */; };
 		FBAC89182AF527BA00320A91 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC89172AF527BA00320A91 /* MainView.swift */; };
 		FBAC891A2AF527BB00320A91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBAC89192AF527BB00320A91 /* Assets.xcassets */; };
 		FBAC891D2AF527BB00320A91 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBAC891C2AF527BB00320A91 /* Preview Assets.xcassets */; };
-		FBAC89262AF527F400320A91 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC89252AF527F400320A91 /* WebView.swift */; };
+		FBAC89262AF527F400320A91 /* MainWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC89252AF527F400320A91 /* MainWebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB1CAAB82AF7CE4A0047F9B5 /* DeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceView.swift; sourceTree = "<group>"; };
+		FB1CAABC2AF7E9BD0047F9B5 /* EnterField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterField.swift; sourceTree = "<group>"; };
+		FB1CAAC32AF983E30047F9B5 /* WebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
+		FB41EB212B013173007126E0 /* DeviceWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceWebView.swift; sourceTree = "<group>"; };
+		FB41EB232B0138D8007126E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FB41EB2C2B02B036007126E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBAC89122AF527BA00320A91 /* Simulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBAC89152AF527BA00320A91 /* SimulatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorApp.swift; sourceTree = "<group>"; };
 		FBAC89172AF527BA00320A91 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		FBAC89192AF527BB00320A91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBAC891C2AF527BB00320A91 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FBAC891E2AF527BB00320A91 /* Simulator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Simulator.entitlements; sourceTree = "<group>"; };
-		FBAC89252AF527F400320A91 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		FBAC89252AF527F400320A91 /* MainWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +46,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB1CAABA2AF7E99A0047F9B5 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				FBAC89252AF527F400320A91 /* MainWebView.swift */,
+				FB1CAAC22AF983CC0047F9B5 /* Partials */,
+				FBAC89172AF527BA00320A91 /* MainView.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		FB1CAABB2AF7E9A80047F9B5 /* DeviceView */ = {
+			isa = PBXGroup;
+			children = (
+				FB1CAAB82AF7CE4A0047F9B5 /* DeviceView.swift */,
+				FB41EB212B013173007126E0 /* DeviceWebView.swift */,
+			);
+			path = DeviceView;
+			sourceTree = "<group>";
+		};
+		FB1CAAC22AF983CC0047F9B5 /* Partials */ = {
+			isa = PBXGroup;
+			children = (
+				FB1CAABC2AF7E9BD0047F9B5 /* EnterField.swift */,
+			);
+			path = Partials;
+			sourceTree = "<group>";
+		};
+		FB41EB2D2B02BB4C007126E0 /* Startup */ = {
+			isa = PBXGroup;
+			children = (
+				FB41EB2C2B02B036007126E0 /* Info.plist */,
+				FBAC891E2AF527BB00320A91 /* Simulator.entitlements */,
+			);
+			path = Startup;
+			sourceTree = "<group>";
+		};
 		FBAC89092AF527BA00320A91 = {
 			isa = PBXGroup;
 			children = (
@@ -54,10 +101,12 @@
 		FBAC89142AF527BA00320A91 /* Simulator */ = {
 			isa = PBXGroup;
 			children = (
+				FB41EB2D2B02BB4C007126E0 /* Startup */,
 				FBAC89242AF527E500320A91 /* Windows */,
 				FBAC89152AF527BA00320A91 /* SimulatorApp.swift */,
+				FB41EB232B0138D8007126E0 /* AppDelegate.swift */,
+				FB1CAAC32AF983E30047F9B5 /* WebViewModel.swift */,
 				FBAC89192AF527BB00320A91 /* Assets.xcassets */,
-				FBAC891E2AF527BB00320A91 /* Simulator.entitlements */,
 				FBAC891B2AF527BB00320A91 /* Preview Content */,
 			);
 			path = Simulator;
@@ -74,18 +123,10 @@
 		FBAC89242AF527E500320A91 /* Windows */ = {
 			isa = PBXGroup;
 			children = (
-				FBAC89272AF5292100320A91 /* Shared */,
-				FBAC89172AF527BA00320A91 /* MainView.swift */,
+				FB1CAABB2AF7E9A80047F9B5 /* DeviceView */,
+				FB1CAABA2AF7E99A0047F9B5 /* MainView */,
 			);
 			path = Windows;
-			sourceTree = "<group>";
-		};
-		FBAC89272AF5292100320A91 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				FBAC89252AF527F400320A91 /* WebView.swift */,
-			);
-			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,8 +199,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBAC89262AF527F400320A91 /* WebView.swift in Sources */,
+				FB41EB242B0138D8007126E0 /* AppDelegate.swift in Sources */,
+				FBAC89262AF527F400320A91 /* MainWebView.swift in Sources */,
+				FB41EB222B013173007126E0 /* DeviceWebView.swift in Sources */,
+				FB1CAAC42AF983E30047F9B5 /* WebViewModel.swift in Sources */,
+				FB1CAAB92AF7CE4A0047F9B5 /* DeviceView.swift in Sources */,
 				FBAC89182AF527BA00320A91 /* MainView.swift in Sources */,
+				FB1CAABD2AF7E9BD0047F9B5 /* EnterField.swift in Sources */,
 				FBAC89162AF527BA00320A91 /* SimulatorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,7 +336,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Simulator/Simulator.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Simulator/Startup/Simulator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -299,6 +345,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Simulator/Startup/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -317,7 +364,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Simulator/Simulator.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Simulator/Startup/Simulator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -326,6 +373,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Simulator/Startup/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -1,11 +1,13 @@
 import SwiftUI
 import WebKit
 
-struct WebView: NSViewRepresentable {
-
-    @Binding var url: String?
+struct MainWebView: NSViewRepresentable {
+    
+    @ObservedObject var viewModel: WebViewModel
     
     func makeNSView(context: Context) -> WKWebView {
+        
+        print(#function, self)
         
         let view = WKWebView()
         view.isInspectable = true
@@ -15,11 +17,10 @@ struct WebView: NSViewRepresentable {
     
     func updateNSView(_ nsView: WKWebView, context: Context) {
         
-        if let url = url {
-         
-            let request = URLRequest(url: URL(string: url)!)
-            
-            nsView.load(request)
+        print(#function, self)
+        
+        if let url = URL(string: viewModel.address) {
+            nsView.load(URLRequest(url: url))
         }
     }
 }
