@@ -26,6 +26,7 @@ struct EnterField: View {
                     viewModel.isReady.toggle()
                 }
                 .textFieldStyle(.plain)
+                .lineLimit(1)
             Spacer()
             Button {
                 viewModel.shouldRefresh.toggle()
