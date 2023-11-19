@@ -9,6 +9,7 @@ class WebViewModel: NSObject, ObservableObject, WKNavigationDelegate {
     @Published var shouldRefresh: Bool = false
     @Published var acceptLanguage: String = "en-GB"
     
+    var scrollPosition: Int = 0
     var address: String = ""
     
     func goBack() {
