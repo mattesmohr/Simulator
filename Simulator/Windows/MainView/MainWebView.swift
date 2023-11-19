@@ -2,7 +2,7 @@ import SwiftUI
 import WebKit
 
 struct MainWebView: NSViewRepresentable {
-    
+
     @ObservedObject var viewModel: WebViewModel
     
     func makeNSView(context: Context) -> WKWebView {
@@ -20,7 +20,11 @@ struct MainWebView: NSViewRepresentable {
         print(#function, self)
         
         if let url = URL(string: viewModel.address) {
-            nsView.load(URLRequest(url: url))
+            
+            var request = URLRequest(url: url)
+            request.setValue(viewModel.acceptLanguage, forHTTPHeaderField: "Accept-Language")
+            
+            nsView.load(request)
         }
     }
 }

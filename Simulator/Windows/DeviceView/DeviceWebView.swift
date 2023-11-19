@@ -13,7 +13,11 @@ struct DeviceWebView: NSViewRepresentable {
         view.isInspectable = true
         
         if let url = URL(string: viewModel.address) {
-            view.load(URLRequest(url: url))
+            
+            var request = URLRequest(url: url)
+            request.setValue(viewModel.acceptLanguage, forHTTPHeaderField: "Accept-Language")
+            
+            view.load(request)
         }
         
         return view
@@ -24,7 +28,11 @@ struct DeviceWebView: NSViewRepresentable {
         print(#function, self)
         
         if let url = URL(string: viewModel.address) {
-            nsView.load(URLRequest(url: url))
+            
+            var request = URLRequest(url: url)
+            request.setValue(viewModel.acceptLanguage, forHTTPHeaderField: "Accept-Language")
+            
+            nsView.load(request)
         }
     }
 }

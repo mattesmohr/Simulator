@@ -3,6 +3,10 @@ import SwiftUI
 @main
 struct SimulatorApp: App {
     
+    @Environment(\.openWindow) private var openWindow
+    
+    @Environment(\.dismissWindow) private var dismissWindow
+    
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     @State private var columnVisibility = NavigationSplitViewVisibility.detailOnly
@@ -34,10 +38,53 @@ struct SimulatorApp: App {
                         Image(systemName: "ipad.badge.play")
                     }
                     .disabled(!viewModel.isReady)
+                    Button {
+                        openWindow(id: "settings")
+                    } label: {
+                        Image(systemName: "gear")
+                    }
                 }
             }
         }
         .windowResizability(.contentSize)
+        Window("Settings", id: "settings") {
+            Form {
+                Section(header: Text("Request")) {
+                    Picker("Language", selection: $viewModel.acceptLanguage) {
+                        Text("English")
+                            .tag("en")
+                        Text("English (United States)")
+                            .tag("en-US")
+                        Text("English (United Kingdom)")
+                            .tag("en-GB")
+                        Text("German")
+                            .tag("de")
+                        Text("German (Germany)")
+                            .tag("de-DE")
+                        Text("German (Austria)")
+                            .tag("de-AT")
+                        Text("German (Switzerland)")
+                            .tag("de-CH")
+                        Text("French")
+                            .tag("fr")
+                        Text("French (France)")
+                            .tag("fr-FR")
+                        Text("French (Canada)")
+                            .tag("fr-CA")
+                    }
+                }
+                Spacer()
+                HStack {
+                    Spacer()
+                    Button {
+                        dismissWindow(id: "settings")
+                    } label: {
+                        Text("Close")
+                    }
+                }
+            }
+            .padding()
+        }
     }
     
     func createiPhone(content: some View) {
