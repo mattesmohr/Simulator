@@ -25,17 +25,29 @@ struct SimulatorApp: App {
                     EnterField(viewModel: viewModel)
                 }
                 ToolbarItemGroup(placement: .primaryAction) {
-                    Button {
-                        createiPhone(content: DeviceView(viewModel: viewModel))
+                    Menu {
+                        Button {
+                            createiPhone(content: DeviceView(viewModel: viewModel))
+                        } label: {
+                            Label("iPhone (Portrait)", systemImage: "iphone.badge.play")
+                                .labelStyle(.titleAndIcon)
+                        }
+                        Button {
+                            createiPad(content: DeviceView(viewModel: viewModel), orientation: .portrait)
+                            
+                        } label: {
+                            Label("iPad (Portrait)", systemImage: "ipad.badge.play")
+                                .labelStyle(.titleAndIcon)
+                        }
+                        Button {
+                            createiPad(content: DeviceView(viewModel: viewModel), orientation: .landscape)
+                            
+                        } label: {
+                            Label("iPad (Landscape)", systemImage: "ipad.landscape.badge.play")
+                                .labelStyle(.titleAndIcon)
+                        }
                     } label: {
-                        Image(systemName: "iphone.badge.play")
-                    }
-                    .disabled(!viewModel.isReady)
-                    Button {
-                        createiPad(content: DeviceView(viewModel: viewModel))
-                        
-                    } label: {
-                        Image(systemName: "ipad.badge.play")
+                        Image(systemName: "ipad.and.iphone")
                     }
                     .disabled(!viewModel.isReady)
                     Button {
@@ -101,11 +113,11 @@ struct SimulatorApp: App {
         window.center()
     }
     
-    func createiPad(content: some View) {
+    func createiPad(content: some View, orientation: DeviceOrientation) {
         
         print(#function)
         
-        let window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 820, height: 1180), styleMask: [.closable, .titled], backing: .buffered, defer: false)
+        let window = NSWindow(contentRect: orientation.dimension, styleMask: [.closable, .titled], backing: .buffered, defer: false)
         window.identifier = NSUserInterfaceItemIdentifier(rawValue: "ipad")
         window.title = "iPad"
         window.isReleasedWhenClosed = false
